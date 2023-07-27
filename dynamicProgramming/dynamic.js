@@ -23,5 +23,5 @@ const tabFibonacci = (n) => {
   return fibNums[n];
 }
 
-console.log(tabFibonacci(500))
+console.log(tabFibonacci(100))
 
