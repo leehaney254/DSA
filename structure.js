@@ -47,19 +47,24 @@
 // either one or two squares forward.
 // bigO O(n^2)
 
-const destination = (arr) => {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i]; j++) {
-      if ((i + j) === arr.length) {
-        console.log(i, j, arr[i]);
-        return true;
-      }
+var maxProfit = function (prices) {
+  let minNo = prices[0];
+  let minIndex = 0, profit = 0;
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] < minNo) {
+      minNo = prices[i];
+      minIndex = i;
     }
   }
-  return false;
-}
+  console.log(minNo, minIndex)
+  for (let i = minIndex; i < prices.length; i++) {
+    if (prices[i] - minNo > profit) profit = prices[i] - minNo;
+  }
 
-console.log(destination([2, 3, 1, 1, 4]));
+  return profit;
+};
+
+console.log(maxProfit([1, 2]))
 
 
 
