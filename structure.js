@@ -48,23 +48,16 @@
 // bigO O(n^2)
 
 var maxProfit = function (prices) {
-  let minNo = prices[0];
-  let minIndex = 0, profit = 0;
-  for (let i = 1; i < prices.length; i++) {
-    if (prices[i] < minNo) {
-      minNo = prices[i];
-      minIndex = i;
+  let profit = 0;
+  for (let i = 0; i < prices.length; i++) {
+    for (let j = i + 1; j < prices.length; j++) {
+      if (prices[j] - prices[i] > profit) profit = prices[j] - prices[i];
     }
   }
-  console.log(minNo, minIndex)
-  for (let i = minIndex; i < prices.length; i++) {
-    if (prices[i] - minNo > profit) profit = prices[i] - minNo;
-  }
-
   return profit;
 };
 
-console.log(maxProfit([1, 2]))
+console.log(maxProfit([2, 4, 1]))
 
 
 
