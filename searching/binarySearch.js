@@ -13,27 +13,23 @@
 // Edge case: when array is empty
 // bigO is O(log n)
 
-const binarySearch = (array, value) => {
-  let leftPointer = 0;
-  let rightPointer = array.length - 1;
-  let centerPointer = Math.floor((leftPointer + rightPointer) / 2);
-  if (array.length === 0) return -1;
-  while ((centerPointer + 1 !== rightPointer) || (centerPointer - 1 !== leftPointer)) {
-    if (array[centerPointer] === value) return centerPointer;
-    if (array[centerPointer] < value) leftPointer = centerPointer;
-    if (array[centerPointer] > value) rightPointer = centerPointer;
-    centerPointer = Math.floor((leftPointer + rightPointer) / 2);
-  }
+const binarySearch = (nums, target) => {
+  left = 0
+  right = nums.length - 1;
 
-  if (array[centerPointer] === value) return centerPointer;
-  if (array[rightPointer] === value) return rightPointer;
-  if (array[leftPointer] === value) return leftPointer;
+  while (left <= right) {
+    const midpoint = left + Math.floor((right - left) / 2);
+    const realnum = nums[midpoint]
+    if (realnum === target) return midpoint;
+    if (realnum < target) left = midpoint + 1;
+    if (realnum > target) right = midpoint - 1;
+  }
   return -1;
-}
+};
 
 console.log(binarySearch([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8));
 console.log(binarySearch([0, 1, 2, 3, 4, 5, 6, 7, 9, 10], 8));
 console.log(binarySearch([40, 41, 42, 43, 45, 46, 47, 48, 49, 50], 50));
 console.log(binarySearch([40, 41, 42, 43, 45, 46, 47, 48, 49, 50], 40));
-console.log(binarySearch([], 50));
+console.log(binarySearch([5], 50));
 console.log(binarySearch([2, 5, 6, 9, 13, 15, 28], 15));
