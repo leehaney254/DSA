@@ -1,14 +1,20 @@
+// Create a class to store our graph
 class Graph {
   constructor() {
     this.adjacencyList = {};
   }
 
+  // Create a function to add a vertex
   addVertex(vertex) {
+    // Check it the vertex already exists, if not create it
     if (!this.adjacencyList[vertex]) this.adjacencyList[vertex] = [];
   }
 
+  // Create a function to add an edge
   addEdge(vertex1, vertex2) {
+    // If one of the vertex does not exist return undefined
     if (!this.adjacencyList[vertex1] || !this.adjacencyList[vertex2]) return undefined;
+    // Else we add them to the list
     this.adjacencyList[vertex1].push(vertex2);
     this.adjacencyList[vertex2].push(vertex1);
   }
@@ -24,7 +30,7 @@ class Graph {
   }
 
   removeVertex(vertex) {
-    //I should have used the remove edge funcion
+    //I should have used the remove edge function
     // with a while(this.adjacencyList.vertex);
     if (!this.adjacencyList[vertex]) return undefined;
     let array1 = this.adjacencyList[vertex];
@@ -126,4 +132,5 @@ graph.addEdge('C', 'E');
 graph.addEdge('D', 'E');
 graph.addEdge('D', 'F');
 graph.addEdge('E', 'F');
-console.log(graph.bfs('A'));
+console.log(graph.adjacencyList)
+//console.log(graph.bfs('A'));
