@@ -7,3 +7,4 @@ Some of the topics include:
 - Tree
 - Recurssion
 - Graphs
+- Sorting
