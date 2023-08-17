@@ -6,3 +6,4 @@ Some of the topics include:
 - linked lists
 - Tree
 - Recurssion
+- Graphs
