@@ -20,7 +20,9 @@ class Graph {
   }
 
   removeEdge(vertex1, vertex2) {
+    // If one of the edges does not exist return
     if (!this.adjacencyList[vertex1] || !this.adjacencyList[vertex2]) return undefined;
+    // Remove the vertices
     this.adjacencyList[vertex1] = this.adjacencyList[vertex1].filter(
       v => v !== vertex2
     );
