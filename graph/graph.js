@@ -32,9 +32,9 @@ class Graph {
   }
 
   removeVertex(vertex) {
-    //I should have used the remove edge function
-    // with a while(this.adjacencyList.vertex);
+    // return if the vertex does not exist
     if (!this.adjacencyList[vertex]) return undefined;
+    // get all the vertex linked to the vertex we want to remove
     let array1 = this.adjacencyList[vertex];
     for (let i = 0; i < array1.length; i++) {
       let currentVertex = array1[i];
