@@ -4,3 +4,4 @@ Some of the topics include:
 - Stack 
 - Queues
 - linked lists
+- Tree
