@@ -71,6 +71,7 @@ class Graph {
     let stack = [];
     // Keeps track of already visited vertex
     let visited = {};
+    // values to return
     let result = [];
     stack.push(vertex);
     while (stack.length !== 0) {
