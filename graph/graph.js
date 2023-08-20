@@ -83,6 +83,7 @@ class Graph {
       if (!visited[vertex]) {
         // Add the vertex to the return array
         result.push(vertex)
+        // Mark the vertex as visited
         visited[vertex] = true;
         let array1 = this.adjacencyList[vertex];
         for (let i = 0; i < array1.length; i++) {
