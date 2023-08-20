@@ -75,6 +75,8 @@ class Graph {
     let result = [];
     // push the first vertex to your stack
     stack.push(vertex);
+
+    // loop while there are items in stack
     while (stack.length !== 0) {
       vertex = stack.pop();
       if (!visited[vertex]) {
