@@ -73,6 +73,7 @@ class Graph {
     let visited = {};
     // values to return
     let result = [];
+    // push the first vertex to your stack
     stack.push(vertex);
     while (stack.length !== 0) {
       vertex = stack.pop();
