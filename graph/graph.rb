@@ -64,7 +64,7 @@ class Graph
         result << vertex
         # Mark the vertex as visited
         visited[vertex] = true
-        # Get all the vertex co
+        # Get all the vertex connected to the current vertex
         array1 = @adjacency_list[vertex]
 
         array1.each do |current_vertex|
