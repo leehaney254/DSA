@@ -55,12 +55,16 @@ class Graph
     # push the first vertex to your stack
     stack << vertex
 
-    
+    # loop while there are items in stack
     while !stack.empty?
       vertex = vertex.pop
+      # Check if the current vertex has already been visited
       unless visited[vertex]
+        # Add the vertex to the return array
         result << vertex
+        # Mark the vertex as visited
         visited[vertex] = true
+        # Get all the vertex co
         array1 = @adjacency_list[vertex]
 
         array1.each do |current_vertex|
