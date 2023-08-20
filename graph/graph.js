@@ -81,6 +81,7 @@ class Graph {
       vertex = stack.pop();
       // Check if the current vertex has already been visited
       if (!visited[vertex]) {
+        // Add the vertex to the return array
         result.push(vertex)
         visited[vertex] = true;
         let array1 = this.adjacencyList[vertex];
