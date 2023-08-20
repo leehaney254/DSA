@@ -79,6 +79,7 @@ class Graph {
     // loop while there are items in stack
     while (stack.length !== 0) {
       vertex = stack.pop();
+      // Check if the current vertex has already been visited
       if (!visited[vertex]) {
         result.push(vertex)
         visited[vertex] = true;
