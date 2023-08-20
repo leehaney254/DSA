@@ -46,11 +46,16 @@ class Graph
   end
 
   def dfs_iterative(vertex)
+    # stack is used to keep track of the vertex to be visited
     stack = []
+    # Keeps track of already visited vertex
     visited = {}
+    # values to return
     result = []
+    # push the first vertex to your stack
     stack << vertex
 
+    
     while !stack.empty?
       vertex = vertex.pop
       unless visited[vertex]
