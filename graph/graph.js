@@ -36,12 +36,14 @@ class Graph {
     if (!this.adjacencyList[vertex]) return undefined;
     // get all the vertex linked to the vertex we want to remove
     let array1 = this.adjacencyList[vertex];
+    //remove the vertex from the connected
     for (let i = 0; i < array1.length; i++) {
       let currentVertex = array1[i];
       this.adjacencyList[currentVertex] = this.adjacencyList[currentVertex].filter(
         v => v !== vertex
       );
     }
+    // delete the vertex
     delete this.adjacencyList[vertex];
   }
 
