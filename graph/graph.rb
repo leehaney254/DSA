@@ -37,11 +37,33 @@ class Graph
     return nil unless @adjacency_list[vertex]
     # get all the vertex linked to the vertex we want to remove
     array1 = @adjacency_list[vertex]
+    # remove the vertex from the connected
     array1.each do |current_vertex|
       @adjacency_list[current_vertex] = @adjacency_list[current_vertex].reject { |v| v == vertex }
     end
-  
+    # delete the vertex
     @adjacency_list.delete(vertex)
+  end
+
+  def dfs_iterative(vertex)
+    stack = []
+    visited = {}
+    result = []
+    stack << vertex
+
+    while !stack.empty?
+      vertex = vertex.pop
+      unless visited[vertex]
+        result << vertex
+        visited[vertex] = true
+        array1 = @adjacency_list[vertex]
+
+        array1.each do |current_vertex|
+          stack << current_vertex
+        end
+      end
+    end
+    result
   end
 
   def prints
