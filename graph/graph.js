@@ -87,6 +87,8 @@ class Graph {
         visited[vertex] = true;
         // Get all the vertex connected to the current vertex
         let array1 = this.adjacencyList[vertex];
+
+        // Loop through each vertex and add it to stack
         for (let i = 0; i < array1.length; i++) {
           let currentVertex = array1[i];
           stack.push(currentVertex);
