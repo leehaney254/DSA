@@ -69,6 +69,7 @@ class Graph {
   dfsIterative(vertex) {
     // stack is used to keep track of the vertex to be visited
     let stack = [];
+    // Keeps track of already visited vertex
     let visited = {};
     let result = [];
     stack.push(vertex);
