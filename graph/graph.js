@@ -85,6 +85,7 @@ class Graph {
         result.push(vertex)
         // Mark the vertex as visited
         visited[vertex] = true;
+        // Get all the vertex connected to the current vertex
         let array1 = this.adjacencyList[vertex];
         for (let i = 0; i < array1.length; i++) {
           let currentVertex = array1[i];
