@@ -67,6 +67,7 @@ class Graph
         # Get all the vertex connected to the current vertex
         array1 = @adjacency_list[vertex]
 
+        # Loop through each vertex and add it to stack
         array1.each do |current_vertex|
           stack << current_vertex
         end
