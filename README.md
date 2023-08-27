@@ -8,3 +8,4 @@ Some of the topics include:
 - Recurssion
 - Graphs
 - Sorting
+- Heap
