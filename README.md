@@ -10,3 +10,4 @@ Some of the topics include:
 - Sorting
 - Heap
 - Recurssion
+- Binary conversion
