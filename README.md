@@ -12,4 +12,5 @@ Some of the topics include:
 - Recurssion
 - searching
 - hashmap
+- dynamic Programming
 - Binary conversion
