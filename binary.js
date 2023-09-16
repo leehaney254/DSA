@@ -27,7 +27,7 @@ var addBinary = function (a, b) {
 
 console.log(addBinary("11", "1"));
 console.log(addBinary("1010", "1011"));
-console.log(addBinary("1011", "1011"));
+// console.log(addBinary("1011", "1011"));
 
 // It uses alot of memory
 // But the speed is good
