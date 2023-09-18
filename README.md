@@ -11,4 +11,5 @@ Some of the topics include:
 - Heap
 - Recurssion
 - searching
+- hashmap
 - Binary conversion
